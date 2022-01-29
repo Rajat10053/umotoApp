@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/backgroundpink"
+    tools:context=".User.finalLoginUser">
+
+
+    <ImageView
+        android:id="@+id/WelcomeBack"
+        android:layout_width="280dp"
+        android:layout_height="58dp"
+        android:layout_marginStart="70dp"
+        android:layout_marginTop="35dp"
+        android:contentDescription="TODO"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.059"
+        app:srcCompat="@drawable/welcomeback" />
+
+    <Button
+        android:id="@+id/finalloginAsUserfacebookButton"
+        android:layout_width="wrap_content"
+        android:textColor="@color/white"
+        android:textAllCaps="false"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+
+        android:layout_marginTop="70dp"
+        android:background="@drawable/round_button_blue"
+        android:text="@string/facebook"
+         />
+
+    <Button
+        android:id="@+id/finalloginAsUsergoogleButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginStart="280dp"
+        android:layout_marginTop="-50dp"
+        android:background="@drawable/round_button_red"
+        android:text="@string/google"
+        android:textAllCaps="false"
+
+        android:textColor="@color/white"
+
+
+        />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:text="@string/or"
+        android:textSize="40sp"
+        android:layout_marginStart="160dp"
+        android:layout_height="wrap_content"/>
+
+    <EditText
+        android:id="@+id/finalloginAsUserEmailId"
+        android:layout_width="260dp"
+        android:layout_height="47dp"
+        android:paddingStart="20dp"
+
+        android:layout_marginLeft="80dp"
+        android:layout_marginTop="23dp"
+        android:layout_marginRight="80dp"
+        android:background="@drawable/round_button"
+        android:ems="10"
+        android:hint="@string/e_mail"
+        android:inputType="textEmailAddress"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/loginAsUserMobileNumber"
+        app:layout_constraintVertical_bias="0.131"
+        tools:ignore="TouchTargetSizeCheck,TextContrastCheck" />
+
+    <EditText
+        android:id="@+id/finalloginAsUserPassword"
+        android:layout_width="260dp"
+        android:layout_height="47dp"
+        android:layout_marginLeft="80dp"
+        android:paddingStart="20dp"
+        android:layout_marginTop="23dp"
+        android:layout_marginRight="80dp"
+        android:background="@drawable/round_button"
+        android:hint="@string/password"
+        android:importantForAutofill="no"
+        android:inputType="textPassword"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/loginAsUserEmailId"
+        app:layout_constraintVertical_bias="0.19"
+        tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck,TextContrastCheck,TextContrastCheck"/>
+    <Button
+        android:id="@+id/finalloginAsUsersignUpButton"
+        android:layout_width="190dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginLeft="110dp"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:layout_height="wrap_content"
+        android:background="@drawable/round_button_green"
+        android:text="@string/loginNow"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/loginAsUserPassword"
+        app:layout_constraintVertical_bias="0.228" />
+
+    <Button
+        android:id="@+id/finalloginAsUserSignupButton"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="55dp"
+        android:layout_marginLeft="25dp"
+        android:background="@drawable/round_button_transparent"
+        android:text="@string/signup_now"
+        android:textColor="@color/purple_700"
+        android:textAllCaps="false"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/loginAsUserPassword"
+        app:layout_constraintVertical_bias="0.228"/>
+
+
+    <TextView
+        android:id="@+id/finalloginAsUserraedytext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-34dp"
+        android:textColor="@color/grey"
+        android:textSize="18dp"
+        android:layout_marginLeft="130dp"
+        android:text="@string/if_you_are_new"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/loginAsUsersignUpButton"
+        />
+    <Button
+        android:id="@+id/finalloginAsUserLoginButton"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="-35dp"
+        android:layout_marginLeft="270dp"
+        android:background="@drawable/round_button_transparent"
+        android:text="@string/needhelp"
+        android:textColor="@color/purple_700"
+        android:textAllCaps="false"
+
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/loginAsUserPassword"
+        app:layout_constraintVertical_bias="0.228"/>
+
+
+</LinearLayout>
