@@ -3,46 +3,41 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:orientation="vertical"
-    android:layout_height="match_parent"
     android:background="@drawable/backgroundpink"
-    tools:context=".User.signUpAsAUserActivity">
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Autoshopowner.finalLoginAsAutoshopowner">
 
     <ImageView
-        android:id="@+id/Welcome"
-        android:layout_width="161dp"
+        android:id="@+id/WelcomeBack"
+        android:layout_width="280dp"
         android:layout_height="58dp"
-        android:layout_marginStart="110dp"
-
+        android:layout_margin="50dp"
+        android:layout_marginStart="70dp"
         android:layout_marginTop="35dp"
+
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.059"
-        app:srcCompat="@drawable/welcome"
-        android:contentDescription="TODO" />
+        app:srcCompat="@drawable/welcomeback" />
 
     <Button
-        android:id="@+id/loginAsUserfacebookButton"
+        android:id="@+id/finalloginAsAutoShopOwnerfacebookButton"
         android:layout_width="wrap_content"
         android:textColor="@color/white"
         android:textAllCaps="false"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
+
         android:layout_marginTop="10dp"
         android:background="@drawable/round_button_blue"
         android:text="@string/facebook"
-        app:layout_constraintBottom_toTopOf="@+id/loginAsUserFullName"
-        app:layout_constraintEnd_toStartOf="@+id/imageView2"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
-
-
+        />
 
     <Button
-        android:id="@+id/loginAsUsergoogleButton"
+        android:id="@+id/finalloginAsAutoShopOwnergoogleButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
 
@@ -53,63 +48,26 @@
         android:textAllCaps="false"
 
         android:textColor="@color/white"
-        app:layout_constraintBottom_toTopOf="@+id/loginAsUserFullName"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/imageView2"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2"
-        tools:ignore="TextContrastCheck,TextContrastCheck" />
+
+
+        />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:text="@string/or"
+        android:textSize="40sp"
+        android:layout_marginStart="160dp"
+        android:layout_height="wrap_content"/>
 
     <EditText
-
-        android:id="@+id/loginAsUserFullName"
-        android:layout_width="260dp"
-        android:paddingStart="20dp"
-
-        android:layout_marginLeft="80dp"
-        android:layout_marginRight="80dp"
-
-        android:layout_marginTop="50dp"
-        android:layout_height="47dp"
-        android:ems="10"
-        android:hint="@string/enter_full_name"
-        android:inputType="textPersonName"
-        android:background="@drawable/round_button"
-
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2"
-        app:layout_constraintVertical_bias="0.203"
-        tools:ignore="TouchTargetSizeCheck" />
-
-    <EditText
-        android:id="@+id/loginAsUserMobileNumber"
-        android:layout_width="260dp"
-        android:paddingStart="20dp"
-        android:layout_height="47dp"
-        android:layout_marginLeft="80dp"
-        android:layout_marginTop="23dp"
-        android:layout_marginRight="80dp"
-        android:background="@drawable/round_button"
-        android:ems="10"
-        android:hint="@string/mobile_number"
-        android:inputType="number"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/loginAsUserFullName"
-        app:layout_constraintVertical_bias="0.116"
-        tools:ignore="TouchTargetSizeCheck,TextContrastCheck" />
-
-    <EditText
-        android:id="@+id/loginAsUserEmailId"
+        android:id="@+id/finalloginAsAutoShopOwnerEmailId"
         android:layout_width="260dp"
         android:layout_height="47dp"
         android:paddingStart="20dp"
+
         android:layout_marginLeft="80dp"
+
         android:layout_marginTop="23dp"
         android:layout_marginRight="80dp"
         android:background="@drawable/round_button"
@@ -121,12 +79,12 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/loginAsUserMobileNumber"
+        app:layout_constraintTop_toBottomOf="@+id/loginAsAutoShopOwnerMobileNumber"
         app:layout_constraintVertical_bias="0.131"
         tools:ignore="TouchTargetSizeCheck,TextContrastCheck" />
 
     <EditText
-        android:id="@+id/loginAsUserPassword"
+        android:id="@+id/finalloginAsAutoShopOwnerPassword"
         android:layout_width="260dp"
         android:layout_height="47dp"
         android:layout_marginLeft="80dp"
@@ -141,52 +99,71 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/loginAsUserEmailId"
+        app:layout_constraintTop_toBottomOf="@+id/loginAsAutoShopOwnerEmailId"
         app:layout_constraintVertical_bias="0.19"
-        tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck,TextContrastCheck,TextContrastCheck" />
-
-
-
-
-
+        tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck,TextContrastCheck,TextContrastCheck"/>
     <Button
-        android:id="@+id/loginAsUsersignUpButton"
+        android:id="@+id/finalloginAsAutoShopOwnersignUpButton"
         android:layout_width="190dp"
         android:layout_marginTop="25dp"
-        android:layout_marginStart="110dp"
+        android:layout_marginLeft="110dp"
+        android:layout_marginRight="110dp"
         android:textAllCaps="false"
         android:textColor="@color/white"
         android:layout_height="wrap_content"
         android:background="@drawable/round_button_green"
-        android:text="@string/signup_now"
+        android:text="@string/loginNow"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/loginAsUserPassword"
+        app:layout_constraintTop_toBottomOf="@+id/loginAsAutoShopOwnerPassword"
         app:layout_constraintVertical_bias="0.228" />
 
-    <TextView
-        android:id="@+id/loginAsUserraedytext"
+    <Button
+        android:id="@+id/finalloginAsAutoShopOwnerSignupButton"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="55dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:background="@drawable/round_button_transparent"
+        android:text="@string/signup_now"
         android:textColor="@color/purple_700"
-        android:layout_marginStart="50dp"
-        android:text="@string/already_heve_aan_account"
+        android:textAllCaps="false"
+        android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/loginAsUsersignUpButton"
-        />
-    <Button
-        android:id="@+id/loginAsUserLoginButton"
+        app:layout_constraintTop_toBottomOf="@+id/loginAsAutoShopOwnerPassword"
+        app:layout_constraintVertical_bias="0.228"/>
+
+
+    <TextView
+        android:id="@+id/finalloginAsAutoShopOwnerraedytext"
         android:layout_width="wrap_content"
-        android:layout_marginTop="-35dp"
-        android:layout_marginStart="270dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-34dp"
+        android:textColor="@color/grey"
+        android:textSize="18dp"
+        android:layout_marginLeft="130dp"
+        android:layout_marginRight="130dp"
+        android:text="@string/if_you_are_new"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/loginAsAutoShopOwnersignUpButton"
+        />
+
+    <Button
+        android:id="@+id/finalloginAsAutoShopOwnerneedHelpButton"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="-33dp"
+        android:layout_marginLeft="260dp"
+        android:layout_marginRight="25dp"
         android:background="@drawable/round_button_transparent"
-        android:text="@string/login"
+        android:text="@string/needhelp"
         android:textColor="@color/purple_700"
         android:textAllCaps="false"
         android:layout_height="wrap_content"
@@ -196,4 +173,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/loginAsUserPassword"
         app:layout_constraintVertical_bias="0.228"/>
+
+
+
 </LinearLayout>

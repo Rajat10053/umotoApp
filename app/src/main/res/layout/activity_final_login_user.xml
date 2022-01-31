@@ -13,9 +13,10 @@
         android:id="@+id/WelcomeBack"
         android:layout_width="280dp"
         android:layout_height="58dp"
+        android:layout_margin="50dp"
         android:layout_marginStart="70dp"
         android:layout_marginTop="35dp"
-        android:contentDescription="TODO"
+
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -31,7 +32,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
 
-        android:layout_marginTop="70dp"
+        android:layout_marginTop="10dp"
         android:background="@drawable/round_button_blue"
         android:text="@string/facebook"
          />
@@ -67,6 +68,7 @@
         android:paddingStart="20dp"
 
         android:layout_marginLeft="80dp"
+
         android:layout_marginTop="23dp"
         android:layout_marginRight="80dp"
         android:background="@drawable/round_button"
@@ -106,6 +108,7 @@
         android:layout_width="190dp"
         android:layout_marginTop="25dp"
         android:layout_marginLeft="110dp"
+        android:layout_marginRight="110dp"
         android:textAllCaps="false"
         android:textColor="@color/white"
         android:layout_height="wrap_content"
@@ -123,6 +126,7 @@
         android:layout_width="wrap_content"
         android:layout_marginTop="55dp"
         android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
         android:background="@drawable/round_button_transparent"
         android:text="@string/signup_now"
         android:textColor="@color/purple_700"
@@ -144,6 +148,7 @@
         android:textColor="@color/grey"
         android:textSize="18dp"
         android:layout_marginLeft="130dp"
+        android:layout_marginRight="130dp"
         android:text="@string/if_you_are_new"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -151,16 +156,17 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/loginAsUsersignUpButton"
         />
+
     <Button
-        android:id="@+id/finalloginAsUserLoginButton"
+        android:id="@+id/finalloginAsUserneedHelpButton"
         android:layout_width="wrap_content"
-        android:layout_marginTop="-35dp"
-        android:layout_marginLeft="270dp"
+        android:layout_marginTop="-33dp"
+        android:layout_marginLeft="260dp"
+        android:layout_marginRight="25dp"
         android:background="@drawable/round_button_transparent"
         android:text="@string/needhelp"
         android:textColor="@color/purple_700"
         android:textAllCaps="false"
-
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -168,6 +174,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/loginAsUserPassword"
         app:layout_constraintVertical_bias="0.228"/>
+
 
 
 </LinearLayout>
