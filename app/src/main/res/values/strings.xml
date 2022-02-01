@@ -10,7 +10,7 @@
     <string name="e_mail">E-mail id</string>
     <string name="Password" />
     <string name="password">Password</string>
-    <string name="google">Google</string>
+    <string name="google">Google Signup</string>
     <string name="facebook">Facebook</string>
     <string name="signup_now">Signup Now</string>
     <string name="already_heve_aan_account">Already have an account?</string>
@@ -19,5 +19,11 @@
     <string name="loginNow">Login Now</string>
     <string name="needhelp">Need Help</string>
     <string name="if_you_are_new">if you are new or</string>
+
+    <string-array name="Cities">
+        <item>Nagpur</item>
+        <item>Delhi</item>
+        <item>Mumbai</item>
+    </string-array>
 
 </resources>

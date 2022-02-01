@@ -6,12 +6,13 @@
     android:orientation="vertical"
     android:layout_height="match_parent"
     android:background="@drawable/backgroundpink"
-    tools:context=".User.signUpAsAUserActivity">
+    tools:context=".User.LoginUpAsAUserActivity">
 
     <ImageView
         android:id="@+id/Welcome"
         android:layout_width="161dp"
         android:layout_height="58dp"
+
         android:layout_marginStart="110dp"
 
         android:layout_marginTop="35dp"
@@ -23,42 +24,11 @@
         app:srcCompat="@drawable/welcome"
         android:contentDescription="TODO" />
 
-    <Button
-        android:id="@+id/loginAsUserfacebookButton"
-        android:layout_width="wrap_content"
-        android:textColor="@color/white"
-        android:textAllCaps="false"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="10dp"
-        android:background="@drawable/round_button_blue"
-        android:text="@string/facebook"
-        app:layout_constraintBottom_toTopOf="@+id/loginAsUserFullName"
-        app:layout_constraintEnd_toStartOf="@+id/imageView2"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
 
 
 
-    <Button
-        android:id="@+id/loginAsUsergoogleButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
 
-        android:layout_marginStart="280dp"
-        android:layout_marginTop="-50dp"
-        android:background="@drawable/round_button_red"
-        android:text="@string/google"
-        android:textAllCaps="false"
 
-        android:textColor="@color/white"
-        app:layout_constraintBottom_toTopOf="@+id/loginAsUserFullName"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/imageView2"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2"
-        tools:ignore="TextContrastCheck,TextContrastCheck" />
 
     <EditText
 
@@ -151,9 +121,10 @@
 
     <Button
         android:id="@+id/loginAsUsersignUpButton"
-        android:layout_width="190dp"
+        android:layout_width="150dp"
         android:layout_marginTop="25dp"
-        android:layout_marginStart="110dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="10dp"
         android:textAllCaps="false"
         android:textColor="@color/white"
         android:layout_height="wrap_content"
@@ -165,6 +136,28 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/loginAsUserPassword"
         app:layout_constraintVertical_bias="0.228" />
+
+    <Button
+        android:id="@+id/loginAsUsergoogleButton"
+        android:layout_width="150dp"
+        android:textAppearance="@style/Widget.Material3.Button.Icon"
+        android:textSize="16dp"
+        android:textAllCaps="false"
+        android:layout_height="wrap_content"
+
+        android:layout_marginStart="200dp"
+        android:layout_marginTop="-45dp"
+        android:background="@drawable/round_button_red"
+        android:text="@string/google"
+
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/loginAsUserFullName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/imageView2"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2"
+        tools:ignore="TextContrastCheck,TextContrastCheck" />
+
 
     <TextView
         android:id="@+id/loginAsUserraedytext"

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/backgroundpink"
+    tools:context=".User.SelectSrevice">
+
+
+    <ImageView
+        android:id="@+id/umoto"
+        android:layout_width="157dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="55dp"
+        android:layout_marginStart="35dp"
+        android:layout_height="73dp"
+        app:srcCompat="@drawable/unomotonew" />
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="wrap_content"
+        android:layout_centerHorizontal="true"
+
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/umoto"
+        android:layout_marginTop="18dp"
+        app:srcCompat="@drawable/servicetype" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="350dp"
+        android:background="#F3E4F7"
+        android:layout_marginTop="200dp"
+        android:layout_centerHorizontal="true"
+        android:layout_height="450dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#F3E4F7"
+            android:orientation="vertical">
+
+            <ImageButton
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/background_circle"
+                android:src="@drawable/car"
+                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck">
+
+            </ImageButton>
+            <ImageButton
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_marginLeft="190dp"
+                android:layout_marginTop="-150dp"
+                android:background="@drawable/background_circle"
+                android:src="@drawable/bike"
+                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck">
+
+            </ImageButton>
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="Locality"
+                android:textSize="20dp"
+                android:layout_marginLeft="15dp"
+                android:textColor="#1C1C1C"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="Change Country"
+                android:textSize="20dp"
+                android:layout_marginLeft="190dp"
+                android:layout_marginTop="-20dp"
+                android:textColor="#353ADC"
+                android:layout_height="wrap_content"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                app:counterTextAppearance="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <AutoCompleteTextView
+                    android:id="@+id/autoCompleteTextView"
+                    android:layout_width="match_parent"
+                    android:background="@color/white"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:inputType="none"
+                    android:text="Please Select Your City"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>

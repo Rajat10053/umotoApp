@@ -3,6 +3,7 @@
     package="com.example.umoto">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
 
     <application
         android:allowBackup="true"
@@ -11,6 +12,18 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Umoto">
+        <activity
+            android:name=".User.SelectSrevice"
+            android:exported="false" />
+        <activity
+            android:name=".User.SliderIntroMainFile"
+            android:exported="false" />
+        <activity
+            android:name=".Autoshopowner.JobForAutomobile"
+            android:exported="false" />
+        <activity
+            android:name=".Mechanic.AcceptThejob"
+            android:exported="false" />
         <activity
             android:name=".User.HomeScreen"
             android:exported="false" />
@@ -30,7 +43,7 @@
             android:name=".Mechanic.LoginAsAMechanic"
             android:exported="false" />
         <activity
-            android:name=".User.signUpAsAUserActivity"
+            android:name=".User.LoginUpAsAUserActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"

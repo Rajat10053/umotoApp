@@ -13,7 +13,7 @@ class LoginAsAAutoshopOwner : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login_as_aautoshop_owner)
 
-        loginAsAutoShopOwnersignUpButton.setOnClickListener {
+        loginAsAutoShopOwnerLoginButton.setOnClickListener {
             startActivity(Intent(this,finalLoginAsAutoshopowner::class.java))
             finish()
         }

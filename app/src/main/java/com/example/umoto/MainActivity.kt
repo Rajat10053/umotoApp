@@ -5,7 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.umoto.Autoshopowner.LoginAsAAutoshopOwner
 import com.example.umoto.Mechanic.LoginAsAMechanic
-import com.example.umoto.User.signUpAsAUserActivity
+import com.example.umoto.User.LoginUpAsAUserActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -14,7 +14,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         loginAsUserButton.setOnClickListener {
-            startActivity(Intent(this, signUpAsAUserActivity::class.java))
+            startActivity(Intent(this, LoginUpAsAUserActivity::class.java))
             finish()
         }
 

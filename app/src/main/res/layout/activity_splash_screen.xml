@@ -11,13 +11,14 @@
         android:id="@+id/iv_note"
         android:layout_width="259dp"
         android:layout_height="166dp"
+        android:layout_centerInParent="true"
         android:layout_marginLeft="70dp"
         android:layout_marginTop="210dp"
+        android:contentDescription="TODO"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.449"
-        app:srcCompat="@drawable/umoto"
-        android:contentDescription="TODO" />
+        app:srcCompat="@drawable/umoto" />
 </RelativeLayout>

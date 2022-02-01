@@ -8,6 +8,7 @@ import android.os.Looper
 import android.util.Log
 import androidx.core.content.withStyledAttributes
 import com.example.umoto.User.HomeScreen
+import com.example.umoto.User.SliderIntroMainFile
 import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.activity_splash_screen.*
 
@@ -36,7 +37,7 @@ class SplashScreenActivity : AppCompatActivity() {
                 overridePendingTransition(android.R.anim.fade_in,android.R.anim.fade_out)
                 finish()
 
-            }else{val i = Intent(this,MainActivity::class.java)
+            }else{val i = Intent(this,SliderIntroMainFile::class.java)
                 startActivity(i)
                 overridePendingTransition(android.R.anim.fade_in,android.R.anim.fade_out)
                 finish()}
