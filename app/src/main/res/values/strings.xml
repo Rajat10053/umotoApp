@@ -16,9 +16,13 @@
     <string name="already_heve_aan_account">Already have an account?</string>
     <string name="login">Login</string>
     <string name="or">Or</string>
+    <string name="open">Open</string>
+    <string name="close">Close</string>
     <string name="loginNow">Login Now</string>
     <string name="needhelp">Need Help</string>
     <string name="if_you_are_new">if you are new or</string>
+    <string name="logout">logout</string>
+    <string name="save">Save</string>
 
     <string-array name="Cities">
         <item>Nagpur</item>

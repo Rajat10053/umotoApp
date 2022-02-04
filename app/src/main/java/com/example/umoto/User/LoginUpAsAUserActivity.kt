@@ -53,7 +53,10 @@ class LoginUpAsAUserActivity : AppCompatActivity() {
         mAuth = FirebaseAuth.getInstance()
 
         loginAsUsergoogleButton.setOnClickListener {
+
             signIn()
+
+
         }
 
 
@@ -113,7 +116,7 @@ class LoginUpAsAUserActivity : AppCompatActivity() {
                 if (task.isSuccessful) {
                     // Sign in success, update UI with the signed-in user's information
                     Log.d("SignInActivity", "signInWithCredential:success")
-                    val intent = Intent(this, HomeScreen::class.java)
+                    val intent = Intent(this, profilepage::class.java)
                     startActivity(intent)
                     finish()
                 } else {

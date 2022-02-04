@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:orientation="vertical"
     android:layout_height="match_parent"
-    android:background="@drawable/backgroundpink"
+    android:background="@drawable/backgroundblue"
     tools:context=".User.LoginUpAsAUserActivity">
 
     <ImageView
@@ -121,9 +121,9 @@
 
     <Button
         android:id="@+id/loginAsUsersignUpButton"
-        android:layout_width="150dp"
+        android:layout_width="180dp"
         android:layout_marginTop="25dp"
-        android:layout_marginStart="40dp"
+        android:layout_marginStart="110dp"
         android:layout_marginEnd="10dp"
         android:textAllCaps="false"
         android:textColor="@color/white"
@@ -137,27 +137,27 @@
         app:layout_constraintTop_toBottomOf="@+id/loginAsUserPassword"
         app:layout_constraintVertical_bias="0.228" />
 
+
     <Button
         android:id="@+id/loginAsUsergoogleButton"
-        android:layout_width="150dp"
-        android:textAppearance="@style/Widget.Material3.Button.Icon"
-        android:textSize="16dp"
-        android:textAllCaps="false"
+        android:layout_width="180dp"
         android:layout_height="wrap_content"
-
-        android:layout_marginStart="200dp"
-        android:layout_marginTop="-45dp"
+        android:layout_marginStart="110dp"
+        android:layout_marginTop="35dp"
         android:background="@drawable/round_button_red"
-        android:text="@string/google"
 
+        android:text="@string/google"
+        android:textAllCaps="false"
+        android:textAppearance="@style/Widget.Material3.Button.Icon"
         android:textColor="@color/white"
+
+        android:textSize="16dp"
         app:layout_constraintBottom_toTopOf="@+id/loginAsUserFullName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/imageView2"
         app:layout_constraintTop_toBottomOf="@+id/imageView2"
         tools:ignore="TextContrastCheck,TextContrastCheck" />
-
 
     <TextView
         android:id="@+id/loginAsUserraedytext"

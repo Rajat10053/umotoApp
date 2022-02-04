@@ -46,7 +46,9 @@ class finalLoginUser : AppCompatActivity() {
         }
 
         finalloginAsUsergoogleButton.setOnClickListener {
+
             signIn()
+
         }
 
         finalloginAsUsersignUpButton.setOnClickListener {
@@ -62,7 +64,7 @@ class finalLoginUser : AppCompatActivity() {
             if ( !TextUtils.isEmpty(password.toString())){
                 loginUser(email.toString(),password.toString())
             }else{
-                Toast.makeText(this,"Fuck you baster login man ",Toast.LENGTH_LONG).show()
+                Toast.makeText(this,"Please fill every thing ",Toast.LENGTH_LONG).show()
             }
 
 
@@ -109,7 +111,7 @@ class finalLoginUser : AppCompatActivity() {
                 if (task.isSuccessful) {
                     // Sign in success, update UI with the signed-in user's information
                     Log.d("SignInActivity", "signInWithCredential:success")
-                    val intent = Intent(this, HomeScreen::class.java)
+                    val intent = Intent(this, profilepage::class.java)
                     startActivity(intent)
                     finish()
                 } else {

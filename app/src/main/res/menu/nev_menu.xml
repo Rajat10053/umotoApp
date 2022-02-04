@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn= "navigation_view"
+
+    >
+
+    <item
+        android:id="@+id/nev_home"
+
+        android:title="Home"
+
+
+        />
+
+    <item
+        android:id="@+id/nev_profile"
+        android:title="Profile"
+
+        />
+
+    <item
+        android:id="@+id/nev_paymentDetail"
+        android:title="Payment Details"
+
+        />
+
+    <item
+        android:id="@+id/nev_notification"
+        android:title="Notification"
+
+        />
+    <item
+        android:id="@+id/nev_trackmechanic"
+        android:title="Track Mechanic"
+
+        />
+
+    <item
+        android:id="@+id/nev_aboutus"
+        android:title="About us"
+
+        />
+    <item
+        android:id="@+id/nev_logout"
+        android:title="Logout"
+
+        />
+
+
+
+</menu>

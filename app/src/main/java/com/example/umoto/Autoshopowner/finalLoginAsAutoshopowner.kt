@@ -30,7 +30,7 @@ class finalLoginAsAutoshopowner : AppCompatActivity() {
             if ( !TextUtils.isEmpty(password.toString())){
                 loginUser(email.toString(),password.toString())
             }else{
-                Toast.makeText(this,"Fuck you baster login man ",Toast.LENGTH_LONG).show()
+                Toast.makeText(this,"please sir fill every thing ",Toast.LENGTH_LONG).show()
             }
         }
 
