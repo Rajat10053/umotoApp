@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "308317209428",
+    "firebase_url": "https://umoto-app-default-rtdb.firebaseio.com",
+    "project_id": "umoto-app",
+    "storage_bucket": "umoto-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:308317209428:android:df68ce308e67942d773ec1",
+        "android_client_info": {
+          "package_name": "com.example.umoto"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "308317209428-sl6d890hr42ivs3s3p5hglq45l9pb2fc.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.umoto",
+            "certificate_hash": "7573f72c2d39c5aa478b9633f53c404af55d0843"
+          }
+        },
+        {
+          "client_id": "308317209428-n0n7pfhdbii7sc46qkrgs3gf8ihq8bqj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAqchOLbXDHYTG1-EBcX91Po7crQx6bk58"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "308317209428-n0n7pfhdbii7sc46qkrgs3gf8ihq8bqj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
