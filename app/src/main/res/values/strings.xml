@@ -29,5 +29,6 @@
         <item>Delhi</item>
         <item>Mumbai</item>
     </string-array>
+    <string name="title_activity_maps">MapsActivity</string>
 
 </resources>

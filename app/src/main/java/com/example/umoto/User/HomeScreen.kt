@@ -49,7 +49,10 @@ class HomeScreen : AppCompatActivity() {
                     finish()
                 }
                 R.id.nev_paymentDetail -> Toast.makeText(this,"Clicked payment",Toast.LENGTH_LONG).show()
-                R.id.nev_notification -> Toast.makeText(this,"Clicked notifiaction",Toast.LENGTH_LONG).show()
+                R.id.nev_notification -> {
+                    startActivity(Intent(this,MapsActivity::class.java))
+                    finish()
+                }
                 R.id.nev_trackmechanic -> {
                     //startActivity(Intent(this,ConfirmPeople::class.java))
                     //finish()
