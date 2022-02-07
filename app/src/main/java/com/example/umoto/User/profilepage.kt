@@ -61,7 +61,7 @@ class profilepage : AppCompatActivity() {
 
 
         binding.Save.setOnClickListener {
-            showProgressBar()
+            //showProgressBar()
 
             val userName = binding.userProfileName.text.toString()
             val email = binding.userProfileemail.text.toString()
@@ -90,7 +90,7 @@ class profilepage : AppCompatActivity() {
 
 
                     }else{
-                        hideProgressBar()
+                        //hideProgressBar()
                         Toast.makeText(this,"Failed to update",Toast.LENGTH_LONG).show()
                     }
                 }
@@ -109,7 +109,7 @@ class profilepage : AppCompatActivity() {
         val progressDialog = ProgressDialog(this)
         progressDialog.setMessage("Uploading file.....")
         progressDialog.setCancelable(false)
-        progressDialog.show()
+        //progressDialog.show()
 
         //see if we can use normal simpledata
 
@@ -121,12 +121,12 @@ class profilepage : AppCompatActivity() {
 
         storageReference.putFile(imageUri).addOnSuccessListener {
             binding.faceimage.setImageURI(null)
-            hideProgressBar()
+            //hideProgressBar()
             Toast.makeText(this,"Image Uploaded",Toast.LENGTH_LONG).show()
 
 
         }.addOnFailureListener {
-            hideProgressBar()
+            //hideProgressBar()
             Toast.makeText(this,"Image failed",Toast.LENGTH_LONG).show()
 
         }
@@ -155,15 +155,15 @@ class profilepage : AppCompatActivity() {
         }
     }
 
-    private fun showProgressBar(){
-        dialog = Dialog(this)
-        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE)
-        dialog.setContentView(R.layout.dialog_box)
-        dialog.setCanceledOnTouchOutside(false)
-        dialog.show()
-    }
+//    private fun showProgressBar(){
+//        dialog = Dialog(this)
+//        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE)
+//        dialog.setContentView(R.layout.dialog_box)
+//        dialog.setCanceledOnTouchOutside(false)
+//        dialog.show()
+//    }
 
-    private fun hideProgressBar(){
-        dialog.dismiss()
-    }
+//    private fun hideProgressBar(){
+//        dialog.dismiss()
+//    }
 }

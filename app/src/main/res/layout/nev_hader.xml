@@ -9,26 +9,27 @@
 
     <de.hdodenhof.circleimageview.CircleImageView
         android:layout_width="60dp"
+        android:id="@+id/chotonav"
 
         android:src="@drawable/face"
         android:layout_height="60dp"/>
     <TextView
         android:layout_width="wrap_content"
-        android:id="@+id/user_name"
+        android:id="@+id/usernavaaahe"
         android:paddingTop="8dp"
         android:padding="5dp"
         android:textSize="20dp"
-        android:text="Prasad"
+
         android:textColor="@color/black"
         android:layout_height="match_parent"/>
 
     <TextView
         android:layout_width="wrap_content"
-        android:id="@+id/user_no"
+        android:id="@+id/usernoaahe"
         android:paddingTop="8dp"
         android:padding="5dp"
         android:textSize="20dp"
-        android:text="8329915327"
+
         android:textColor="@color/black"
         android:layout_height="match_parent"/>
 
