@@ -20,14 +20,8 @@ class MainActivity : AppCompatActivity() {
             finish()
         }
 
-        loginAsaMechanicButton.setOnClickListener {
-            startActivity(Intent(this, finalLoginAsMechanic::class.java))
-            finish()
-        }
 
-        loginAsAutomobileShopownerButton.setOnClickListener {
-            startActivity(Intent(this, finalLoginAsAutoshopowner::class.java))
-            finish()
-        }
+
+
     }
 }

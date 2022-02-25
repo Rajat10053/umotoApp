@@ -11,7 +11,7 @@
         android:id="@+id/firebaseimage"
         android:layout_width="180dp"
         android:layout_height="180dp"
-
+        android:src="@drawable/face"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="85dp" />
 

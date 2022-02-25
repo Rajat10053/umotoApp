@@ -130,7 +130,7 @@ class finalLoginUser : AppCompatActivity() {
                     task: Task<AuthResult> ->
                 if (task.isSuccessful){
                     var username = email.split("@")[0]
-                    var dashboardIntent = Intent(this, HomeScreen::class.java)
+                    var dashboardIntent = Intent(this, profilepage::class.java)
                     dashboardIntent.putExtra("name", username)
                     startActivity(dashboardIntent)
                     finish()

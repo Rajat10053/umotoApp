@@ -25,14 +25,14 @@ class SplashScreenActivity : AppCompatActivity() {
 //        },3000)
         mAuth = FirebaseAuth.getInstance()
         val user = mAuth.currentUser
-        Log.d("I am still here",user.toString())
+
 
 
 
         iv_note.alpha = 0f
         iv_note.animate().setDuration(2000).alpha(1f).withEndAction {
             if(user != null){
-                Log.d("Oh man I am here",user.toString())
+
                 startActivity(Intent(this,HomeScreen::class.java))
                 overridePendingTransition(android.R.anim.fade_in,android.R.anim.fade_out)
                 finish()

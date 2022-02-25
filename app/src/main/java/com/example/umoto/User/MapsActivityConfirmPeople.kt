@@ -2,16 +2,13 @@ package com.example.umoto.User
 
 import android.Manifest
 import android.annotation.SuppressLint
-import android.content.Intent
 import android.content.pm.PackageManager
 import android.location.Location
 import android.location.LocationRequest
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Toast
 import androidx.core.app.ActivityCompat
-import androidx.fragment.app.Fragment
-import androidx.fragment.app.FragmentManager
-import androidx.lifecycle.Transformations.map
 import com.example.umoto.R
 
 import com.google.android.gms.maps.CameraUpdateFactory
@@ -21,39 +18,43 @@ import com.google.android.gms.maps.SupportMapFragment
 import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.MarkerOptions
 
-import com.example.umoto.databinding.ActivityMapsBinding
+import com.example.umoto.databinding.ActivityMapsConfirmPeopleBinding
 import com.google.android.gms.location.FusedLocationProviderClient
 import com.google.android.gms.location.LocationCallback
 import com.google.android.gms.location.LocationServices
 import com.google.android.gms.maps.model.Marker
-import kotlinx.android.synthetic.main.activity_maps.*
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.database.DatabaseReference
+import com.google.firebase.database.FirebaseDatabase
 
-class MapsActivity : AppCompatActivity(), OnMapReadyCallback, GoogleMap.OnMarkerClickListener {
+class MapsActivityConfirmPeople : AppCompatActivity(), OnMapReadyCallback ,GoogleMap.OnMarkerClickListener {
 
     private lateinit var mMap: GoogleMap
+    private val LOCATION_PERMISSION_REQUEST = 1
+    private lateinit var mAuth : FirebaseAuth
+
     private lateinit var lastLocation: Location
+    private lateinit var databaseReference: DatabaseReference
     private lateinit var locationRequest: LocationRequest
     private lateinit var locationCallback: LocationCallback
-    private lateinit var fuseLocationClient:FusedLocationProviderClient
+    private lateinit var fuseLocationClient: FusedLocationProviderClient
+
 
     companion object{
-        internal const val LOCATION_REQUEST_CODE = 1
+        const val LOCATION_REQUEST_CODE = 1
     }
-    private lateinit var binding: ActivityMapsBinding
+    private lateinit var binding: ActivityMapsConfirmPeopleBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        binding = ActivityMapsBinding.inflate(layoutInflater)
+        binding = ActivityMapsConfirmPeopleBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        gotonextfragementto.setOnClickListener {
-            startActivity(Intent(this,MapsActivityConfirmPeople::class.java))
+        mAuth = FirebaseAuth.getInstance()
+        var uida = mAuth.currentUser?.uid
 
-
-
-
-        }
+        databaseReference = FirebaseDatabase.getInstance().getReference()
 
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
         val mapFragment = supportFragmentManager
@@ -62,13 +63,6 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback, GoogleMap.OnMarker
 
         fuseLocationClient = LocationServices.getFusedLocationProviderClient(this)
     }
-
-//    private fun replaceFragment(fragment: Fragment) {
-//        var fragmentManager = supportFragmentManager
-//        var fragmentTransaction = fragmentManager.beginTransaction()
-//        fragmentTransaction.replace(R.layout.activity_maps,map)
-//        fragmentTransaction.commit()
-//    }
 
     /**
      * Manipulates the map once available.
@@ -84,16 +78,10 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback, GoogleMap.OnMarker
 
         mMap.uiSettings.isZoomControlsEnabled = true
 
-        mMap.setOnMarkerClickListener(this)
+        mMap.setOnMarkerClickListener (this)
 
         setUpMap()
-
-        // Add a marker in Sydney and move the camera
-//        val sydney = LatLng(-34.0, 151.0)
-//        mMap.addMarker(MarkerOptions().position(sydney).title("Marker in Sydney"))
-//        mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney))
     }
-
 
     @SuppressLint("MissingPermission")
     private fun setUpMap() {
@@ -102,16 +90,26 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback, GoogleMap.OnMarker
                 Manifest.permission.ACCESS_FINE_LOCATION
             ) != PackageManager.PERMISSION_GRANTED) {
 
-            ActivityCompat.requestPermissions(this, arrayOf(Manifest.permission.ACCESS_FINE_LOCATION),LOCATION_REQUEST_CODE)
+            ActivityCompat.requestPermissions(this, arrayOf(Manifest.permission.ACCESS_FINE_LOCATION),
+                MapsActivity.LOCATION_REQUEST_CODE
+            )
 
             return
         }
         mMap.isMyLocationEnabled = true
         fuseLocationClient.lastLocation.addOnSuccessListener(this) {
+
+            var uida = mAuth.currentUser?.uid
             if (it != null){
                 lastLocation = it
 
                 val currentLatLong = LatLng(it.latitude,it.longitude)
+                var locationlogin = Locationloggin(it.latitude,it.longitude)
+                databaseReference.child("userlocation").setValue(locationlogin).addOnSuccessListener {
+                    Toast.makeText(this,"Location saved  ", Toast.LENGTH_SHORT).show()
+                }.addOnFailureListener {
+
+                }
                 placeMarkerOnMap(currentLatLong)
                 mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(currentLatLong,19f))
             }
@@ -127,7 +125,6 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback, GoogleMap.OnMarker
     }
 
     override fun onMarkerClick(p0: Marker) = false
-
 
 
 }

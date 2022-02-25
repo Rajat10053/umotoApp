@@ -1,16 +1,21 @@
 package com.example.umoto.User
 
+import android.Manifest
 import android.R.menu
 import android.app.Dialog
 import android.content.Intent
+import android.content.pm.PackageManager
 import android.graphics.BitmapFactory
 import android.os.Bundle
 import android.view.MenuItem
 import android.widget.TextView
 import android.widget.Toast
+import androidx.activity.result.ActivityResultLauncher
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.ActionBar
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat
 import androidx.drawerlayout.widget.DrawerLayout
 import com.example.umoto.R
 import com.example.umoto.databinding.ActivityHomeScreenBinding
@@ -27,11 +32,14 @@ import java.io.File
 
 
 class HomeScreen : AppCompatActivity() {
+    private lateinit var permissionlauncher: ActivityResultLauncher<Array<String>>
+    private var isLocationpermission = false
+
+    private var isstoragepermission = false
     lateinit var toggle:ActionBarDrawerToggle
     private lateinit var binding: ActivityHomeScreenBinding
 
     private lateinit var auth : FirebaseAuth
-    private lateinit var dialog: Dialog
     private lateinit var databaseReference: DatabaseReference
     private lateinit var storageReference: StorageReference
     private lateinit var user: UserProfile
@@ -44,7 +52,13 @@ class HomeScreen : AppCompatActivity() {
         binding = ActivityHomeScreenBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val menuToUse = R.menu.my_right_side_menu
+        permissionlauncher = registerForActivityResult(ActivityResultContracts.RequestMultiplePermissions()){
+            permissions ->
+            isstoragepermission = permissions[Manifest.permission.READ_EXTERNAL_STORAGE] ?: isstoragepermission
+            isLocationpermission = permissions[Manifest.permission.ACCESS_FINE_LOCATION] ?: isLocationpermission
+
+        }
+        requestPermission()
 
         val drawerlayout:DrawerLayout = findViewById(R.id.drawerLayout)
         val navigationview: NavigationView = findViewById(R.id.naviagtionView)
@@ -100,11 +114,54 @@ class HomeScreen : AppCompatActivity() {
 
         mAuth = FirebaseAuth.getInstance()
 
-        button.setOnClickListener {
-            Firebase.auth.signOut()
+        card.setOnClickListener {
+            when(it.id){
 
+                R.id.generalServices -> {
+                    startActivity(Intent(this,MapsActivity::class.java))
+                    finish()
+                }
+                R.id.fullbodypaint ->{
+                    startActivity(Intent(this,MapsActivity::class.java))
+                    finish()
+                }
+                R.id.completcarspa ->{
+                    startActivity(Intent(this,MapsActivity::class.java))
+                    finish()
+                }
+                R.id.acServices ->{
+                    startActivity(Intent(this,MapsActivity::class.java))
+                    finish()
+                }
+                R.id.wheelalignment ->{
+                    startActivity(Intent(this,MapsActivity::class.java))
+                    finish()
+                }
+                R.id.scratchremoval ->{
+                    startActivity(Intent(this,MapsActivity::class.java))
+                    finish()
+                }
+                R.id.interiroDetailing ->{
+                    startActivity(Intent(this,MapsActivity::class.java))
+                    finish()
+                }
+                R.id.enginecheckup ->{
+                    startActivity(Intent(this,MapsActivity::class.java))
+                    finish()
+                }
+                R.id.waterwash ->{
+                    startActivity(Intent(this,MapsActivity::class.java))
+                    finish()
+                }
+                R.id.emergencyServices ->{
+                    startActivity(Intent(this,MapsActivity::class.java))
+                    finish()
+                }
 
+            }
         }
+
+
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
@@ -154,6 +211,32 @@ class HomeScreen : AppCompatActivity() {
 
             Toast.makeText(this,"We failed",Toast.LENGTH_SHORT).show()
         }
+    }
+
+    private fun requestPermission(){
+        isstoragepermission = ContextCompat.checkSelfPermission(
+            this,
+            Manifest.permission.READ_EXTERNAL_STORAGE
+        ) == PackageManager.PERMISSION_GRANTED
+
+        isLocationpermission = ContextCompat.checkSelfPermission(
+            this,
+            Manifest.permission.ACCESS_FINE_LOCATION
+        ) == PackageManager.PERMISSION_GRANTED
+
+        val permissionRequest : MutableList<String> = ArrayList()
+
+        if (!isLocationpermission){
+            permissionRequest.add(Manifest.permission.ACCESS_FINE_LOCATION)
+        }
+        if (!isstoragepermission){
+            permissionRequest.add(Manifest.permission.READ_EXTERNAL_STORAGE)
+        }
+
+        if (permissionRequest.isNotEmpty()){
+            permissionlauncher.launch(permissionRequest.toTypedArray())
+        }
+
     }
 
 

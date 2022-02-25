@@ -12,7 +12,8 @@
         android:layout_width="150dp"
         android:layout_height="150dp"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="65dp" />
+        android:layout_marginTop="65dp"
+        android:src="@drawable/face" />
 
     <Button
         android:id="@+id/backButton"
@@ -103,7 +104,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
         android:background="@drawable/round_button"
-        android:hint="@string/password"
+        android:hint="use text password"
         android:inputType="textPassword"
         android:padding="15dp"
         tools:ignore="SpeakableTextPresentCheck" />

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:map="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".User.MapsActivityConfirmPeople" />
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="10dp"
+        android:layout_height="100dp">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/Express"
+                android:layout_width="150dp"
+                android:layout_height="100dp"
+                android:paddingStart="10dp"
+                android:drawableStart="@drawable/fastimage"
+                android:background="@drawable/round_button"
+                android:text="Express "
+                android:textSize="15dp"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+            <Button
+                android:id="@+id/classic"
+                android:layout_width="150dp"
+                android:padding="10dp"
+                android:drawableStart="@drawable/fastimage"
+                android:text="Clasic"
+                android:background="@drawable/round_button"
+                android:textSize="15dp"
+                android:layout_height="100dp"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+            <Button
+                android:id="@+id/newcargo"
+                android:layout_width="150dp"
+                android:background="@drawable/round_button"
+                android:textSize="15dp"
+                android:drawableStart="@drawable/fastimage"
+                android:text="New Cargo"
+                android:layout_height="100dp"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+
+
+        </LinearLayout>
+
+    </HorizontalScrollView>
+
+</RelativeLayout>
+

@@ -17,6 +17,7 @@
         android:layout_width="wrap_content"
         android:id="@+id/usernavaaahe"
         android:paddingTop="8dp"
+        android:hint="user name"
         android:padding="5dp"
         android:textSize="20dp"
 
@@ -27,6 +28,7 @@
         android:layout_width="wrap_content"
         android:id="@+id/usernoaahe"
         android:paddingTop="8dp"
+        android:hint="user number"
         android:padding="5dp"
         android:textSize="20dp"
 

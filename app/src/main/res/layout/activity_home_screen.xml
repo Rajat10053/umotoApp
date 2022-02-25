@@ -16,17 +16,210 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <Button
-            android:id="@+id/button"
+        <ImageView
+            android:id="@+id/umotologo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Button"
-            android:layout_centerVertical="true"
-            android:layout_centerHorizontal="true"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="25dp"
+            app:srcCompat="@drawable/unomotonew" />
 
+        <ImageView
+            android:id="@+id/select"
+            android:layout_width="350dp"
+            android:layout_height="50dp"
+            android:layout_above="@+id/card"
+            android:layout_below="@id/umotologo"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="169dp"
+            android:src="@drawable/selectyourservicetocontinue" />
+
+        <HorizontalScrollView
+            android:layout_width="340dp"
+            android:layout_height="150dp"
+            android:layout_above="@id/card"
+            android:layout_marginBottom="10dp"
+            android:layout_centerHorizontal="true"
+            tools:ignore="SpeakableTextPresentCheck">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/carservice" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/muscularcarserviceworkerrepairingvehicle" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/carservicechecklist" />
+
+            </LinearLayout>
+
+
+
+
+        </HorizontalScrollView>
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card"
+            android:layout_width="match_parent"
+            android:layout_height="360dp"
+            android:layout_marginBottom="10dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/color">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/color"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/generalServices"
+                    android:textSize="17dp"
+                    android:layout_width="wrap_content"
+                    android:padding="10dp"
+
+                    android:paddingRight="2dp"
+
+                    android:textAllCaps="false"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/round_button"
+                    android:text="General Service" />
+
+                <Button
+                    android:id="@+id/acServices"
+                    android:textSize="15dp"
+                    android:layout_marginEnd="20dp"
+                    android:padding="10dp"
+                    android:textAllCaps="false"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="255dp"
+                    android:background="@drawable/round_button"
+                    android:layout_marginTop="25dp"
+                    android:text="Ac Service" />
+
+                <Button
+                    android:id="@+id/completcarspa"
+                    android:textSize="17dp"
+                    android:padding="10dp"
+                    android:textAllCaps="false"
+                    android:layout_width="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/round_button"
+                    android:layout_marginTop="-50dp"
+                    android:text="Complet Car Spa" />
+
+                <Button
+                    android:id="@+id/scratchremoval"
+                    android:textSize="15dp"
+                    android:padding="10dp"
+                    android:layout_marginEnd="20dp"
+                    android:textAllCaps="false"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/round_button"
+                    android:layout_marginStart="250dp"
+                    android:layout_marginTop="15dp"
+                    android:text="Scratch Removal" />
+
+                <Button
+                    android:id="@+id/wheelalignment"
+                    android:textSize="17dp"
+                    android:padding="10dp"
+                    android:textAllCaps="false"
+                    android:layout_width="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/round_button"
+                    android:layout_marginTop="-50dp"
+                    android:text="Wheel alignment" />
+
+                <Button
+                    android:id="@+id/enginecheckup"
+                    android:textSize="15dp"
+                    android:padding="10dp"
+                    android:layout_marginEnd="20dp"
+                    android:textAllCaps="false"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="250dp"
+                    android:background="@drawable/round_button"
+                    android:layout_marginTop="25dp"
+                    android:text="Engine Checkup" />
+
+                <Button
+                    android:id="@+id/interiroDetailing"
+                    android:textSize="17dp"
+                    android:padding="10dp"
+                    android:textAllCaps="false"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="-50dp"
+                    android:background="@drawable/round_button"
+                    android:text="Interior Detailing" />
+
+                <Button
+                    android:id="@+id/emergencyServices"
+                    android:textSize="15dp"
+                    android:padding="10dp"
+                    android:layout_marginEnd="20dp"
+                    android:textAllCaps="false"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="250dp"
+                    android:background="@drawable/round_button"
+                    android:layout_marginTop="15dp"
+                    android:text="Emergency Service" />
+
+                <Button
+                    android:id="@+id/waterwash"
+                    android:textSize="17dp"
+                    android:padding="10dp"
+                    android:textAllCaps="false"
+                    android:layout_width="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="-50dp"
+                    android:background="@drawable/round_button"
+                    android:text="Water Watsh" />
+
+                <Button
+                    android:id="@+id/fullbodypaint"
+                    android:textSize="14dp"
+                    android:layout_marginEnd="20dp"
+                    android:padding="10dp"
+
+                    android:textAllCaps="false"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="240dp"
+                    android:background="@drawable/round_button"
+                    android:layout_marginTop="-340dp"
+                    android:text="Full Body Painting" />
+
+            </LinearLayout>
+
+
+        </androidx.cardview.widget.CardView>
 
     </RelativeLayout>
 
