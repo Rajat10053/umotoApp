@@ -7,7 +7,7 @@
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WAKE_LOCK" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.WAKE_LOCK" />
@@ -21,7 +21,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Umoto">
-
+        <activity
+            android:name=".User.Aboutus"
+            android:exported="false" />
         <!--
              TODO: Before you run your application, you need a Google Maps API key.
 
@@ -57,31 +59,17 @@
         <activity
             android:name=".User.SliderIntroMainFile"
             android:exported="false" />
-        <activity
-            android:name=".Autoshopowner.JobForAutomobile"
-            android:exported="false" />
-        <activity
-            android:name=".Mechanic.AcceptThejob"
-            android:exported="false" />
+
+
         <activity
             android:name=".User.HomeScreen"
             android:exported="false"
             android:theme="@style/Theme.WithBar" />
-        <activity
-            android:name=".Autoshopowner.finalLoginAsAutoshopowner"
-            android:exported="false" />
-        <activity
-            android:name=".Mechanic.finalLoginAsMechanic"
-            android:exported="false" />
+
         <activity
             android:name=".User.finalLoginUser"
             android:exported="false" />
-        <activity
-            android:name=".Autoshopowner.LoginAsAAutoshopOwner"
-            android:exported="false" />
-        <activity
-            android:name=".Mechanic.LoginAsAMechanic"
-            android:exported="false" />
+
         <activity
             android:name=".User.LoginUpAsAUserActivity"
             android:exported="false" />

@@ -13,7 +13,7 @@ class SliderIntroMainFile : AppCompatActivity() {
         setContentView(R.layout.activity_slider_intro_main_file)
 
         nextBottom.setOnClickListener {
-            startActivity(Intent(this,MainActivity::class.java))
+            startActivity(Intent(this, LoginUpAsAUserActivity::class.java))
             finish()
         }
     }

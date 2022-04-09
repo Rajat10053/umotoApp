@@ -94,8 +94,8 @@ class HomeScreen : AppCompatActivity() {
                 }
                 R.id.nev_paymentDetail -> Toast.makeText(this,"Clicked payment",Toast.LENGTH_LONG).show()
                 R.id.nev_notification -> {
-                    startActivity(Intent(this,MapsActivity::class.java))
-                    finish()
+                    //startActivity(Intent(this,MapsActivity::class.java))
+                    //finish()
                 }
                 R.id.nev_trackmechanic -> {
                     //startActivity(Intent(this,ConfirmPeople::class.java))
@@ -114,52 +114,48 @@ class HomeScreen : AppCompatActivity() {
 
         mAuth = FirebaseAuth.getInstance()
 
-        card.setOnClickListener {
-            when(it.id){
-
-                R.id.generalServices -> {
-                    startActivity(Intent(this,MapsActivity::class.java))
-                    finish()
-                }
-                R.id.fullbodypaint ->{
-                    startActivity(Intent(this,MapsActivity::class.java))
-                    finish()
-                }
-                R.id.completcarspa ->{
-                    startActivity(Intent(this,MapsActivity::class.java))
-                    finish()
-                }
-                R.id.acServices ->{
-                    startActivity(Intent(this,MapsActivity::class.java))
-                    finish()
-                }
-                R.id.wheelalignment ->{
-                    startActivity(Intent(this,MapsActivity::class.java))
-                    finish()
-                }
-                R.id.scratchremoval ->{
-                    startActivity(Intent(this,MapsActivity::class.java))
-                    finish()
-                }
-                R.id.interiroDetailing ->{
-                    startActivity(Intent(this,MapsActivity::class.java))
-                    finish()
-                }
-                R.id.enginecheckup ->{
-                    startActivity(Intent(this,MapsActivity::class.java))
-                    finish()
-                }
-                R.id.waterwash ->{
-                    startActivity(Intent(this,MapsActivity::class.java))
-                    finish()
-                }
-                R.id.emergencyServices ->{
-                    startActivity(Intent(this,MapsActivity::class.java))
-                    finish()
-                }
-
-            }
+        generalServices.setOnClickListener {
+            startActivity(Intent(this,MapsActivity::class.java))
+            finish()
         }
+        fullbodypaint.setOnClickListener {
+            startActivity(Intent(this,MapsActivity::class.java))
+            finish()
+        }
+
+        acServices.setOnClickListener {
+            startActivity(Intent(this,MapsActivity::class.java))
+            finish()
+        }
+        completcarspa.setOnClickListener {
+            startActivity(Intent(this,MapsActivity::class.java))
+            finish()
+        }
+        wheelalignment.setOnClickListener {
+            startActivity(Intent(this,MapsActivity::class.java))
+            finish()
+        }
+        scratchremoval.setOnClickListener {
+            startActivity(Intent(this,MapsActivity::class.java))
+            finish()
+        }
+        interiroDetailing.setOnClickListener {
+            startActivity(Intent(this,MapsActivity::class.java))
+            finish()
+        }
+        enginecheckup.setOnClickListener {
+            startActivity(Intent(this,MapsActivity::class.java))
+            finish()
+        }
+        waterwash.setOnClickListener {
+            startActivity(Intent(this,MapsActivity::class.java))
+            finish()
+        }
+        emergencyServices.setOnClickListener {
+            startActivity(Intent(this,MapsActivity::class.java))
+            finish()
+        }
+
 
 
     }
